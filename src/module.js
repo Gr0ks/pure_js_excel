@@ -1,7 +1,7 @@
 console.log('module.js');
 
 async function start() {
-  await Promise.resolve();
+  return await Promise.resolve('test polyfill');
 }
 
-start();
+start().then(res => console.log(res));
